@@ -1,0 +1,53 @@
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	position: relative;
+	list-style: none;
+	padding: 15px;
+	background-color: #fff;
+	border-bottom: #eee solid 1px;
+
+	i {
+		font-size: 1.3rem;
+	}
+
+	label {
+		display: block;
+
+		.text {
+			margin-left: 10px;
+		}
+	}
+
+	.delete {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		font-weight: bold;
+		background: none;
+		font-size: 1.2rem;
+		border: none;
+		transform: translateY(-50%);
+	}
+
+	&.checked {
+		color: #888;
+		opacity: .9;
+
+		.text {
+			text-decoration: line-through;
+		}
+	}
+
+	&.private {
+		background: #eee;
+		border-color: #ddd;
+	}
+
+	@media (max-width: 600px) {
+		padding: 12px 15px;
+	}
+}

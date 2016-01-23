@@ -1,0 +1,23 @@
+.new-task{
+	margin-top: 10px;
+	margin-bottom: -10px;
+	position: relative;
+
+	input {
+		box-sizing: border-box;
+		padding: 10px 0;
+		background: transparent;
+		border: none;
+		width: 100%;
+		//padding-right: 80px;
+		font-size: 1.3rem;
+
+		&:focus{
+			outline: 0;
+		}
+
+		@media (max-width: 600px) {
+			padding-bottom: 5px;
+		}
+	}
+}
