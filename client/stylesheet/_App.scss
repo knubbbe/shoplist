@@ -1,36 +1,36 @@
-body {
-	font-family: sans-serif;
-	background-color: #efefef;
-	//background-color: #315481;
-	//background-image: linear-gradient(to bottom, #315481, #918e82 100%);
-	//background-attachment: fixed;
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
 
+body {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-
-	padding: 0;
 	margin: 0;
-
-	font-size: 1rem;
+	padding: 0;
+	font-family: $font-family;
+	font-size: $font-size;
+	background-color: $app-bg;
 }
 
 .container {
-	max-width: 600px;
+	max-width: $app-width;
 	margin: 0 auto;
 	min-height: 100%;
-	border-radius: 0 0 5px 5px;
-	box-shadow: 0 0 5px rgba(#000, .3);
+	//border-radius: 0 0 5px 5px;
+	box-shadow: $box-shadow;
 	overflow: hidden;
 }
 
 header {
-	background: #d2edf4;
-	background-image: linear-gradient(to bottom, #d0edf5, #e1e5f0 100%);
-	padding: 20px 15px 15px 15px;
 	position: relative;
+	padding: 20px 15px 15px 15px;
+	color: $header-color;
+	background: $header-bg;
 
 	.hide-completed {
 		float: right;

@@ -1,0 +1,21 @@
+$phone-width: 640px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+$app-width: 600px;
+$font-family: 'Open Sans', sans-serif;
+$font-size: 1rem;
+
+$app-bg: #efefef;
+$header-bg: #47a4cc;
+$header-color: #fff;
+$task-bg: #fff;
+$task-border: #eee solid 1px;
+$task-checked-color: #888;
+$task-checked-opacity: .6;
+$input-color-invert: #000;
+$placeholder-color: rgba(#000, .5);
+$input-color-invert: $header-color;
+$placeholder-color-invert: rgba($header-color, .5);
+
+$box-shadow: 0 0 5px rgba(#000, .3);

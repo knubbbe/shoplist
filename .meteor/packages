@@ -19,3 +19,7 @@ react
 momentjs:moment
 fourseven:scss
 seba:minifiers-autoprefixer
+check
+accounts-password
+accounts-google
+service-configuration

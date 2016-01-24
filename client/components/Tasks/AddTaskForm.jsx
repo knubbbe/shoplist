@@ -3,13 +3,18 @@ AddTaskForm = React.createClass({
 		handleSubmit: React.PropTypes.func.isRequired
 	},
 
+	componentDidMount() {
+		const input = ReactDOM.findDOMNode(this.refs.taskText);
+		input.focus();
+	},
+
 	render() {
 		return (
 			<form className="new-task" onSubmit={ this.handleSubmit } >
 				<input
 					type="text"
-					ref="textInput"
-					placeholder="Type to add new tasks" />
+					ref="taskText"
+				placeholder="Type to add new tasks" />
 			</form>
 		);
 	},
@@ -17,7 +22,7 @@ AddTaskForm = React.createClass({
 	handleSubmit(e) {
 		e.preventDefault();
 
-		const input = ReactDOM.findDOMNode(this.refs.textInput);
+		const input = ReactDOM.findDOMNode(this.refs.taskText);
 		const value = input.value.trim();
 
 		if (input.value !== '') {

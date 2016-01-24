@@ -2,7 +2,6 @@
 App = React.createClass({
 	mixins: [ReactMeteorData],
 
-	// Loads items from the Tasks collection and puts them on this.data.tasks
 	getMeteorData() {
 		let query = {};
 
@@ -15,23 +14,17 @@ App = React.createClass({
 		};
 	},
 
+	componentWillMount() {
+		Meteor.subscribe("tasks");
+	},
+
 	getInitialState() {
 		return {
 			hideCompleted: false
 		}
 	},
 
-	componentWillMount() {
-		Meteor.subscribe("tasks");
-	},
-
-	renderTasks() {
-		return this.data.tasks.map((task) => {
-			return <Task key={ task._id } task={ task } />;
-		});
-	},
-
-	render() {
+	renderApp() {
 		return (
 			<div className="container">
 				<header>
@@ -40,18 +33,27 @@ App = React.createClass({
 						className="hide-completed"
 						onClick={ this.toggleHideCompleted }>
 						{ this.state.hideCompleted ?
-							<i className="ion-checkmark-circled success"></i> :
-							<i className="ion-ios-circle-outline"></i> }
-						Hide completed
+							'Show ' :
+							'Hide ' }
+						completed
 					</label>
-					<AddTaskForm handleSubmit={ this.handleAddTaskSubmit } />
+					<AddTaskForm
+						handleSubmit={ this.handleAddTaskSubmit } />
 				</header>
 
-				<ul>
-					{ this.renderTasks() }
-				</ul>
+				<TaskList
+					tasks={ this.data.tasks }
+					hideCompleted={ this.state.hideCompleted } />
 			</div>
 		);
+	},
+
+	renderLogin() {
+		return <Login />
+	},
+
+	render() {
+		return (!Meteor.userId())? this.renderLogin() : this.renderApp();
 	},
 
 	toggleHideCompleted() {

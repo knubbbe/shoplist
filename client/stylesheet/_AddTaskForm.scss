@@ -4,19 +4,22 @@
 	position: relative;
 
 	input {
-		box-sizing: border-box;
 		padding: 10px 0;
 		background: transparent;
 		border: none;
 		width: 100%;
-		//padding-right: 80px;
 		font-size: 1.3rem;
+		color: $input-color-invert;
+
+		&::placeholder {
+			color: $placeholder-color-invert;
+		}
 
 		&:focus{
 			outline: 0;
 		}
 
-		@media (max-width: 600px) {
+		@include phone() {
 			padding-bottom: 5px;
 		}
 	}
