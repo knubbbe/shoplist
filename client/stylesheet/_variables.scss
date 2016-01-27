@@ -3,6 +3,7 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 
 $app-width: 600px;
+$header-height: 145px;;
 $font-family: 'Open Sans', sans-serif;
 $font-size: 1rem;
 
@@ -12,8 +13,8 @@ $header-color: #fff;
 $task-bg: #fff;
 $task-border: #eee solid 1px;
 $task-checked-color: #888;
-$task-checked-opacity: .6;
-$input-color-invert: #000;
+$task-checked-opacity: .5;
+$input-color: #000;
 $placeholder-color: rgba(#000, .5);
 $input-color-invert: $header-color;
 $placeholder-color-invert: rgba($header-color, .5);

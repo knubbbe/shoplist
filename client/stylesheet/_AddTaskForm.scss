@@ -1,7 +1,8 @@
 .new-task{
-	margin-top: 10px;
-	margin-bottom: -10px;
 	position: relative;
+	margin-top: 0;
+	margin-bottom: -10px;
+	clear: both;
 
 	input {
 		padding: 10px 0;
