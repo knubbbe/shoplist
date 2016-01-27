@@ -2,6 +2,7 @@
 *:before,
 *:after {
 	box-sizing: border-box;
+	tap-highlight-color: rgba(0,0,0,0);
 }
 
 body {
@@ -39,6 +40,10 @@ body {
 	box-shadow: $box-shadow;
 	overflow: hidden;
 	overflow-y: scroll;
+
+	@include phone() {
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 header {
